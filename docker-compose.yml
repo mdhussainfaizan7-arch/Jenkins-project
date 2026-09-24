@@ -15,7 +15,7 @@ services:
       - app-network
 
   backend:
-    image: unisanashra/cicd-backend:latest
+    image: mdhussain27/cicd-backend:latest
     build: 
       context: ./backend
     container_name: backend
@@ -27,7 +27,7 @@ services:
       - app-network
 
   frontend:
-    image: unisanashra/cicd-frontend:latest
+    image: mdhussain27/cicd-frontend:latest
     build: 
       context: ./frontend
     container_name: frontend
