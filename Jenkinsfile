@@ -73,7 +73,7 @@ pipeline {
                         ssh -o StrictHostKeyChecking=no ${env.EC2_USER}@${env.EC2_IP} 'mkdir -p ~/deployment'
 
                         scp -o StrictHostKeyChecking=no -r ${env.K8S_MANIFEST_DIR} ${env.EC2_USER}@${env.EC2_IP}:~/deployment/
-                        scp -o StrictHostKeyChecking=no -r monitoring ${env.EC2_USER}@${env.EC2_IP}:~/deployment/
+                    
 
                         ssh -o StrictHostKeyChecking=no ${env.EC2_USER}@${env.EC2_IP} '
                             cd ~/deployment &&
